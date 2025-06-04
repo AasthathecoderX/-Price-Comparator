@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Comparator - Find the Best Deals</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="/">🛒 Price Comparator</a>
+        <button class="navbar-toggler" ...>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">...</ul>
+        </div>
+    </div>
+</nav>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#how-to-use">How to Use</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#disclaimer">Disclaimer</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container fade-in">
+        <h1 class="text-center mb-4">Compare Product Prices</h1>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="messages">
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                            {{ message }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <form method="POST" class="mb-5">
+            <div class="form-group mb-3">
+                <label for="sproduct">Enter Product Name:</label>
+                <input type="text" class="form-control" id="sproduct" name="sproduct" placeholder="e.g., 'Samsung Galaxy S24', 'organic tomatoes 1kg'" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Search for Prices</button>
+        </form>
+
+        <section id="how-to-use" class="how-to-use">
+            <h4>💡 How to Use</h4>
+            <ol>
+                <li><strong>Enter Product Name:</strong> Type the full name of the product you're looking for in the search bar above. Be as specific as possible (e.g., "Apple iPhone 15 Pro Max 256GB" instead of just "iPhone").</li>
+                <li><strong>Click 'Search':</strong> Our system will then visit Amazon and Flipkart to find the best match for your product.</li>
+                <li><strong>View Results:</strong> You'll be presented with the closest matching product, its price, and a direct link to the product page on each platform.</li>
+                <li><strong>Compare and Save:</strong> Easily see which platform offers the better deal!</li>
+            </ol>
+            <p class="text-muted small"><strong>Tip:</strong> For groceries, try generic terms like "fresh tomato" or "basmati rice" to improve Amazon Fresh results.</p>
+        </section>
+
+        <section id="disclaimer" class="disclaimer mt-5">
+            <h4>⚠️ Important Disclaimer</h4>
+            <ul>
+                <li><strong>Search Result Accuracy:</strong> Our system attempts to find the *closest* matching product based on your search query. However, due to variations in product listings (e.g., different sellers, product variants, bundles), the results from Amazon and Flipkart might not always be for the *exact same* item.</li>
+                <li><strong>Price Fluctuations:</strong> Prices on e-commerce websites change very frequently. The prices displayed are real-time at the moment of your search, but may vary shortly thereafter.</li>
+                <li><strong>Availability:</strong> Product availability can vary by location and seller. Please check the respective websites for current stock status.</li>
+                <li><strong>Shipping & Offers:</strong> Our tool currently focuses on the base price. Please account for shipping costs, delivery charges, and any special offers or bank discounts directly on Amazon and Flipkart.</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <p>&copy; 2025 Price Comparator. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTFyXPzmtbuNVGZxlkPcKmY8Nf1o8L7p41D_c4Nl3a/uPj+8D" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>

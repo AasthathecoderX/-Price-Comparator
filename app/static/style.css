@@ -1,0 +1,161 @@
+/* static/style.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    line-height: 1.6;
+}
+
+.title {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5em;
+    color: #007bff; 
+}
+
+.navbar {
+    background-color: #007bff; 
+    
+}
+
+
+.navbar .container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    width: 100%; 
+    
+}
+
+
+.navbar-brand {
+    font-weight: bold;
+    color: #2d26fb !important; 
+    font-size: 1.8em; 
+    padding: 0.5rem 0; 
+    display: flex;
+    align-items: center; 
+    gap: 8px; 
+}
+
+
+.navbar-collapse {
+    justify-content: center; 
+}
+
+.container {
+    max-width: 960px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #007bff;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.form-group label {
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    padding: 10px 15px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.alert {
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.card {
+    border: 1px solid #e2e6ea;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    padding: 20px;
+    background-color: #fefefe;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.card p strong {
+    color: #495057;
+}
+
+.card .product-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.card .product-link:hover {
+    text-decoration: underline;
+}
+
+.disclaimer, .how-to-use {
+    background-color: #e9ecef;
+    border-left: 5px solid #007bff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.disclaimer h4, .how-to-use h4 {
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.disclaimer ul, .how-to-use ol {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    color: #6c757d;
+    font-size: 0.9em;
+    border-top: 1px solid #e9ecef;
+}
+
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
