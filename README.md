@@ -59,10 +59,10 @@ Before you begin, ensure you have the following installed:
 1.  **Clone the Repository (or create project files):**
 
     ```bash
-    git clone <your-repo-url>
+    git clone https://github.com/AasthathecoderX/Price-Comparator
     cd Price_Comp_final
     ```
-    (If you don't have a repo, create the `Price_Comp_final` directory and place `app.py`, `amazon_scraping.py`, `flipkart_scraping.py`, and the `static/` and `templates/` folders inside it.)
+   
 
 2.  **Create a Virtual Environment (Recommended):** 🖥️
 
