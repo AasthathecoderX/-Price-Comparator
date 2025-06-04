@@ -1,3 +1,0 @@
-python flipkart_scraping.py apple
-
-python amazon_scraping.py apple
